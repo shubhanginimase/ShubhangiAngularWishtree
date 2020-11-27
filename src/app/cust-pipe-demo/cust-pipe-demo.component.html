@@ -1,0 +1,19 @@
+<p>cust-pipe-demo works!</p>
+
+<table>
+    <th>EmployeeCode</th>
+    <th>EmployeeName</th>
+    <th>Gender</th>
+    <th>EmployeeSalary</th>
+    <th>EmpDesignation</th>
+    <th>Experience</th>
+
+    <tr *ngFor='let emp of employee'>
+        <td>{{emp.employee_id}}</td>
+        <td>{{emp.employee_name|namePiope:emp.gender}}</td>
+        <td>{{emp.gender}}</td>
+        <td>{{emp.salary}}</td>
+        <td>{{emp.Designation | designationPipe:emp.yrofexp}}</td>
+        <td>{{emp.yrofexp}}</td>
+    </tr>
+</table>

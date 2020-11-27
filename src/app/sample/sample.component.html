@@ -1,0 +1,20 @@
+<p>sample works!</p>
+
+<div>
+    {{title}}
+    Enter Employee Name :<input type="text" [(ngModel)]="ename"/>
+
+    Name: {{ename}}
+
+
+<input [ngModel] ="ename"/>
+Name:{{ename}}
+
+    <input [value]="ename"/>
+
+    <h3> Event handling </h3>
+
+    <button (click)="showMsg()"> Greet </button>
+    {{msg}}
+
+</div>

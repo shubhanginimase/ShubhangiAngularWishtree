@@ -1,0 +1,36 @@
+<p>product-detail works!</p>
+
+
+
+<input (input)="getValue($event)" placeholder="Enter name to search">
+<br>
+<br>
+<button (click)="getProductByName()">Check Product</button>
+<br>
+<br>
+
+
+  <div *ngIf="flag2">
+    <table
+    >
+         <th>Sr.No</th>
+         <th>Product ID</th>
+         <th>Product Name</th>
+         <th>Price</th>
+        <!-- <th>Discount(%)</th>
+        <th>Discounted Price</th>-->
+      
+         <tr *ngFor="let p of temparr; let i=index">
+           <td>{{i+1}}</td>
+           <td>{{p.pid}}</td>
+           <td>{{p.pname}}</td>
+           <td>{{p.price}}</td>
+           <!--<td>{{p.discount}}</td>
+           <td>{{p.price}}</td>-->
+         </tr>
+       
+    </table>
+  </div>
+  
+
+

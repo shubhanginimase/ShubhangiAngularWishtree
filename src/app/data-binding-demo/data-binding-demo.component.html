@@ -1,0 +1,12 @@
+<p>data-binding-demo works!</p>
+
+<h4>{{title}}Property Binding-Element Property Binding,One way binding, @Input
+
+<p>Now observe component property binding</p>
+
+<br/><app-msg prefixMsg='Website name is ' [siteName] ='website.name'> </app-msg>
+
+<br/><app-msg prefixMsg='Website name is ' bind-siteName='website.name'> </app-msg>
+
+<br/><app-msg prefixMsg='Website name is ' siteName ='{{website.name}}'> </app-msg>
+</h4>

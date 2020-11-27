@@ -1,0 +1,69 @@
+<p>template-forms-demo1 works!</p>
+
+<h1>Sign up form</h1>
+<br><br>
+
+<div class="container">
+    <form #frm="ngForm" (ngSubmit)="logForm(frm.value)"> 
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control" #nm="ngModel" ngModel name="First Name" required minlength="2">
+            <div class="alert alert-danger" *ngIf="nm.invalid && nm.touched">
+                <div *ngIf="nm.errors.required">
+                    First name required
+                </div>
+                <div *ngIf="nm.errors.minlength">
+                    Minimum 2 characters required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control" #nm="ngModel" ngModel name="lastname" required minlength="5">
+            <div class="alert alert-danger" *ngIf="nm.invalid && nm.touched">
+                <div *ngIf="nm.errors.required">
+                    Last Name required
+                </div>
+                <div *ngIf="nm.errors.minlength">
+                    Minimum 5 characters required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" #nm="ngModel" ngModel name="Email" required pattern="[a-zA-Z0-9]">
+            <div class="alert alert-danger" *ngIf="nm.invalid && nm.touched">
+                <div *ngIf="nm.errors.required">
+                    Email required
+                </div>
+                <div *ngIf="nm.errors.pattern">
+                    Valid Email required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">password</label>
+            <input type="password" class="form-control" #nm="ngModel" ngModel name="Password" required minlength="10">
+            <div class="alert alert-danger" *ngIf="nm.invalid && nm.touched">
+                <div *ngIf="nm.errors.required">
+                    Password is required
+                </div>
+                <div *ngIf="nm.errors.minlength">
+                    Minimum 10 characters required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-success" [disabled]="frm.invalid">submit</button>       
+         </div>
+
+    </form>
+
+</div>
+<pre>
+    {{value | json}}
+</pre>

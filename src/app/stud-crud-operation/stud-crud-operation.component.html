@@ -1,0 +1,41 @@
+<p>stud-crud-operation works!</p>
+<p>crud-operation works!</p>
+{{title}}
+<table>
+    <tr> <td> Student Id</td>  <td> <input type="number" [(ngModel)]="id"/> </td></tr>
+    <tr><td> Student Name</td> <td><input type="text" [(ngModel)]="name"/> </td></tr>
+    <tr><td> Student Marks</td> <td> <input type="number" [(ngModel)]="marks"/></td></tr>
+    <tr><td>Student Grade</td> <td><input type="=text" [(ngModel)]="grade"/></td></tr>
+</table>
+<button (click)="AddData()" *ngIf="isAdded" > Add Data</button>
+<button (click)="updateData()" *ngIf="isEdited"> Update Data</button>
+<div *ngIf="student.length > 0">
+<table>
+    <thead>
+        <tr>
+        <th colspan="100%" >Student Data</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Student Marks</th>
+            <th>Student Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let stud of student;let i=index">
+           <td><button (click)="removeStudent(i)">Remove</button></td>
+           <td><button (click)="editStudent(i)">Edit</button></td>
+        
+            <td>{{stud.id}}</td>
+            <td>{{stud.name}}</td>
+            <td>{{stud.marks}}</td>
+            <td>{{stud.grade}}</td>
+            
+        </tr>
+    </tbody>
+
+    </table>
+</div>

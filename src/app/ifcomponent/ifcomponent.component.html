@@ -1,0 +1,38 @@
+<p>ifcomponent works!</p>
+
+<h1 *ngIf = 'status' >{{appTitle}} to the world of directive demo </h1>
+
+<div *ngIf="flag1; else msgElseBlock" >
+    <table class ="table table-bordered">
+        <tr>
+            <td>{{emp.emp}}</td>
+        </tr>
+    </table>
+
+
+        <h2> Using ngFor </h2>
+        <table class="table table-bordered">
+            <tr *ngFor="let i of arr">
+                <td>{{i}}</td>
+            </tr>
+    </table>
+
+    <ul>
+        <li *ngFor="let i of arrString">{{i}}</li>
+
+    </ul>
+
+    <ol>
+        <li *ngFor="let p of person">
+            {{p.pname}}
+            <ol>
+                <li *ngFor="let f of p.flat">{{f.flatid}}</li>
+            </ol>
+        </li>
+    </ol>
+
+</div>
+<ng-template #msgElseBlock>
+    <div>Else Block:No employee available !!!!</div>
+</ng-template>
+

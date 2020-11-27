@@ -1,0 +1,20 @@
+<p>calculator works!</p>
+
+<div class="Container">
+
+    First Number=<input type="number" name="no1" [(ngModel)]="no1"><br><br><br>
+    Second Number=<input type="number" name="no2" [(ngModel)]="no2"><br><br><br>
+
+
+    <button style="margin-right:14px;" (click)="addition()">Add</button><br><br>
+    
+    <button style="margin-right:14px;" (click)="subtraction()">Sub</button><br><br>
+    
+    <button style="margin-right:14px;" (click)="multiplication()">Mul</button><br><br>
+    
+    <button style="margin-right:14px;" (click)="division()">Div</button><br><br>
+
+    <h2>Result of operation: {{result}}</h2>
+</div>
+
+

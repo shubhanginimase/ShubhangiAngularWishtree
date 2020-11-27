@@ -1,0 +1,35 @@
+<p>pipe-demo works!</p>
+
+<h1>{{message|uppercase}}</h1>
+
+<h1>{{message|lowercase}}</h1>
+
+<h1>{{message|titlecase}}</h1>
+
+<h1>{{amount}}</h1>
+
+<!--currency pipe -->
+<h1>{{amount|currency}}</h1>
+<h1>{{amount|currency:'INR'}}</h1>
+<h1>{{amount|currency:'INR':false}}</h1>
+
+<!--date pipe -->
+<h1>{{todayDate}}</h1>
+<h1>{{todayDate|date}}</h1>
+<h1>{{todayDate|date:'shortDate'}}</h1>
+<h1>{{todayDate|date:'fullDate'}}</h1>
+<h1>{{todayDate|date:'hh:mm:ss'}}</h1>
+<h1>{{todayDate|date:'hh:mm:ss a'}}</h1>
+
+<!--percentage pipe -->
+<h1>{{amount|percent}}</h1>
+<h1>{{amount|percent:'.2'}}</h1>
+<h1>{{amount|percent:'.3'}}</h1>
+
+<h1>{{message|slice:3}}</h1>
+<h1>{{message|slice:3:8}}</h1>
+
+<!-- pipe chaining(aplying a pipe on other pipe) it is able to aply on single field -->
+<h1>{{todayDate|date:'fullDate'}}</h1>
+<h1>{{todayDate|date:'fullDate'|uppercase}}</h1>
+
